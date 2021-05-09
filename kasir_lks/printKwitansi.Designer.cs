@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(672, 471);
             this.Name = "printKwitansi";
             this.Text = "printKwitansi";
-            this.Load += new System.EventHandler(this.printKwitansi_Load);
+            //this.Load += new System.EventHandler(this.printKwitansi_Load);
             this.ResumeLayout(false);
 
         }

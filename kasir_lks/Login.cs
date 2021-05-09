@@ -84,6 +84,7 @@ namespace kasir_lks
             {
                 try
                 {
+                    //login dengan mengecek ke table user 
                     cmd = new MySqlCommand("SELECT * FROM tb_user where username = '" + t_uname.Text + "'", con.Buka());
                     reader = cmd.ExecuteReader();
                     if (reader.HasRows == true)
@@ -114,6 +115,7 @@ namespace kasir_lks
                                
 
                             }
+
                             else if (jeneng == t_uname.Text && pass != t_pass.Text)
                             {
                                 uname = reader["username"].ToString();
@@ -149,6 +151,8 @@ namespace kasir_lks
                 {
                     con.Tutup();
                 }
+
+                // jika login gagal sampai 3x maka akun akan di update statusnya menjadi di blokir
                 if (x == 3)
                 {
                     int z = 0;

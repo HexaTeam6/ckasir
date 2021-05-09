@@ -24,6 +24,7 @@ namespace kasir_lks
             text_kwitansi = noKwitansi;
                  
         }
+        /*
         void cetak()
         {
             cmd = new MySqlCommand("SELECT * from v_kwi",con.Buka());
@@ -40,5 +41,7 @@ namespace kasir_lks
         {
 
         }
+         
+         */
     }
 }

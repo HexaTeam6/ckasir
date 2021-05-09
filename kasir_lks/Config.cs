@@ -13,6 +13,8 @@ namespace kasir_lks
         private MySqlConnection cnn;
         private MySqlCommand cmd;
         string strkoneksi = null;
+
+        // Melakukan koneksi dengan database
         public MySqlConnection Buka()
         {
             strkoneksi = "SERVER=localhost; database=lks_kasir;uid=root;password=;";
@@ -30,11 +32,14 @@ namespace kasir_lks
             }
             return cnn;
         }
+
+        //menutup koneksi
         public MySqlConnection Tutup()
         {
             cnn.Close();
             return cnn;
         }
+
         public bool UD(string query, string info)
         {
             try
